@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="419.0" prefWidth="334.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ContoSpesaController">
+   <top>
+      <Label alignment="CENTER" prefHeight="17.0" prefWidth="144.0" text="CALCOLO SPESA" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial Bold" size="13.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="9.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="285.0" prefWidth="268.0" BorderPane.alignment="CENTER">
+         <children>
+            <CheckBox fx:id="checkRick" mnemonicParsing="false" onAction="#checkr" text="Riccardo" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkAle" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" onAction="#checka" text="Alessandro" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="13.0" top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkPeppe" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" onAction="#checkp" text="Giuseppe" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="checkDav" mnemonicParsing="false" onAction="#checkd" text="Davide" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets right="8.0" top="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <VBox fx:id="box" alignment="CENTER_RIGHT" disable="true" prefHeight="307.0" prefWidth="334.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="prezzo" alignment="CENTER" prefHeight="25.0" prefWidth="59.0">
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="metti" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#dometti" text="Metti">
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="togli" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#dotogli" text="Togli">
+                           <HBox.margin>
+                              <Insets top="8.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="spesa" editable="false" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TableView prefHeight="266.0" prefWidth="334.0">
+                    <columns>
+                      <TableColumn fx:id="colonnaRiccardo" editable="false" prefWidth="82.0" text="Riccardo" />
+                      <TableColumn fx:id="colonnaAlessandro" editable="false" prefWidth="85.0" text="Alessandro" />
+                        <TableColumn fx:id="colonnaGiuseppe" editable="false" prefWidth="82.0" text="Giuseppe" />
+                        <TableColumn fx:id="colonnaDavide" prefWidth="84.0" text="Davide" />
+                    </columns>
+                  </TableView>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="totaleRick" alignment="CENTER" editable="false" />
+                        <TextField fx:id="totaleAle" alignment="CENTER" editable="false" />
+                        <TextField fx:id="totalePep" alignment="CENTER" editable="false" />
+                        <TextField fx:id="totaleDav" alignment="CENTER" editable="false">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="svuota" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#dosvuota" prefHeight="25.0" prefWidth="59.0" text="Svuota">
+                           <HBox.margin>
+                              <Insets left="120.0" top="4.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="totaletot" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="63.0">
+                           <HBox.margin>
+                              <Insets left="60.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
